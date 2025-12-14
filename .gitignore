@@ -26,4 +26,4 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 backend/DataFiles/*.json
-O_APRESENTACAO.md
+ROTEIRO_APRESENTACAO.md
