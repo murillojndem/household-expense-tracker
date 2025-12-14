@@ -8,6 +8,7 @@ namespace ControleGastos.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    // Controller simples para CRUD de categorias — delega regras ao `ICategoriaService`.
     public class CategoriasController : ControllerBase
     {
         private readonly ICategoriaService _categoriaService;
@@ -42,7 +43,10 @@ namespace ControleGastos.Controllers
         public async Task<IActionResult> GetById(Guid id)
         {
             var c = await _categoriaService.GetByIdAsync(id);
-            if (c == null) return NotFound();
+
+            if (c == null) 
+                return NotFound();
+            
             return Ok(c);
         }
 

@@ -8,6 +8,7 @@ namespace ControleGastos.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    // Controller simples para CRUD de pessoas — delega validações e lógica ao `IPessoaService`.
     public class PessoasController : ControllerBase
     {
         private readonly IPessoaService _pessoaService;
